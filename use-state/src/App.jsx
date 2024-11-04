@@ -21,4 +21,25 @@ function Counter(){
   )
 }
 
-export default Counter
+
+export function ColorChanger(){
+  const [color , setColor] = useState("red")
+   function setBlue(){
+    setColor(color => color = "blue")
+   }
+
+   function setYellow(){
+    setColor(color => color = "yellow")
+   }
+
+
+  return (
+    <div>
+      <div className='colordiv' style={{ backgroundColor: color }}></div>
+      <button onClick={setBlue}>blue</button>
+      <button onClick={setYellow}>yellow</button>
+    </div>
+  )
+}
+
+export default  Counter
